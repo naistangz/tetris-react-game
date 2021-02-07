@@ -7,16 +7,16 @@ export const useStage = (player, resetPlayer) => {
 
   useEffect(() => {
     setRowsCleared(0);
-
     const sweepRows = (newStage) =>
-      newStage.reduce((accumulator, row) => {
+      newStage.reduce((acc, row) => {
         if (row.findIndex((cell) => cell[0] === 0) === -1) {
-          setRowsCleared((previous) => previous + 1);
-          accumulator.unshift(new Array(newStage[0].length).fill([0, "clear"])); // Removing filled rows and adding new rows at the top
-          return accumulator;
+          setRowsCleared((prev) => prev + 1);
+          // Removing filled rows and adding new rows at the top
+          acc.unshift(new Array(newStage[0].length).fill([0, "clear"]));
+          return acc;
         }
-        accumulator.push(row);
-        return accumulator;
+        acc.push(row);
+        return acc;
       }, []);
 
     const updateStage = (prevStage) => {
@@ -41,12 +41,17 @@ export const useStage = (player, resetPlayer) => {
         resetPlayer();
         return sweepRows(newStage);
       }
-
       return newStage;
     };
 
     setStage((prev) => updateStage(prev));
-  }, [player, resetPlayer]);
+  }, [
+    player.collided,
+    player.position.x,
+    player.position.y,
+    player.tetromino,
+    resetPlayer,
+  ]);
 
   return [stage, setStage, rowsCleared];
 };
