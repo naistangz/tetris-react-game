@@ -12,5 +12,5 @@ Developed using:
 
 ---
 
-![gameover](gameover.png)
-![tetris](tetris.png)
+![gameover](gameover.png =100x20)
+![tetris](tetris.png =100x20)
