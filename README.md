@@ -12,5 +12,5 @@ Developed using:
 
 ---
 
-![gameover](gameover.png =100x20)
-![tetris](tetris.png =100x20)
+<img src="gameover.png" alt="gameover-tetris" style="width:100px">
+<img src="tetrispng" alt="tetris" style="width:100px">
