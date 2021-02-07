@@ -81,6 +81,10 @@ const Tetris = () => {
     drop();
   };
 
+  useInterval(() => {
+    drop();
+  }, dropTime);
+
   const move = ({ keyCode }) => {
     if (!gameOver) {
       if (keyCode === 37) {
@@ -89,15 +93,11 @@ const Tetris = () => {
         movePlayer(1); // Moving right
       } else if (keyCode === 40) {
         dropPlayer(); // Down
-      } else if (keyCode == 38) {
+      } else if (keyCode === 38) {
         playerRotate(stage, 1); // Up arrow to rotate
       }
     }
   };
-
-  useInterval(() => {
-    drop();
-  }, dropTime);
 
   return (
     <StyledTetrisWrapper
