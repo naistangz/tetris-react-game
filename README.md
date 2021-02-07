@@ -1,6 +1,6 @@
 # Tetris with a space theme
 
-[![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)]
+![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)
 
 Click [here](https://tetris-react-tang.herokuapp.com/) to check out the app
 
