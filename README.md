@@ -12,5 +12,6 @@ Developed using:
 
 ---
 
+<img src="tetris.png" alt="tetris" width="100px" height="50px">
+
 <img src="gameover.png" alt="gameover-tetris" style="width:50px">
-<img src="tetris.png" alt="tetris" style="width:100px">
